@@ -32,13 +32,149 @@
 
 <body>
 
-
 <div class="reveal">
-  <div class="slides">
-    <section>
-      <h2>Voyage au pays de «<span style="color: orange">Let's Encrypt</span>»</h2>
-    </section>
-  </div>
+    <div class="slides">
+        <section>
+            <h2>Voyage au pays de «<span style="color: orange">Let's Encrypt</span>»</h2>
+        </section>
+        <section>
+            <h2>Chiffrement assymétrique</h2>
+
+            <ul style="margin-top: 1em">
+                <li class="fragment">Clef privée + publique</li>
+                <div data-svg-fragment="myAssets/images/assymétrique.svg#[*|label=toto]">
+                    <a class="fragment" title="[*|label=base]"></a>
+                    <a class="fragment" title="[*|label=frag1]"></a>
+                    <a class="fragment" title="[*|label=frag2]"></a>
+                </div>
+                <li class="fragment">Lent<span class="fragment"> ⇒ Signature</span></li>
+                <li class="fragment">RSA, DSA</li>
+                <li class="fragment">ECDSA</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Certificats</h2>
+
+            <ul style="margin-top: 2em">
+                <li class="fragment">Enrobage de clef publique</li>
+                <li class="fragment">Méta données</li>
+                <li class="fragment">Cryptographiquement signé</li>
+                <li class="fragment">Norme X.509</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Certificats auto-signés</h2>
+
+            <ul>
+                <li class="fragment">Signature ⇒ clef privée</li>
+                <li class="fragment">Vérification ⇒ clef publique</li>
+                <li class="fragment">Clef publique ⇒ certificat</li>
+                <div data-svg-fragment="myAssets/images/certificat.svg#[*|label=toto]">
+                    <a class="fragment" title="[*|label=base]"></a>
+                    <a class="fragment" title="[*|label=frag1]"></a>
+                </div>
+                <li class="fragment">Confiance ≡ Import explicite</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Chaînes de certification</h2>
+
+            <ul>
+                <li class="fragment">Exhaustivité des imports</li>
+                <li class="fragment">Une solution est la délégation</li>
+                <div data-svg-fragment="myAssets/images/chaine.svg#[*|label=toto]">
+                    <a class="fragment" title="[*|label=base]"></a>
+                    <a class="fragment" title="[*|label=frag1]"></a>
+                    <a class="fragment" title="[*|label=frag2]"></a>
+                    <a class="fragment" title="[*|label=frag3]"></a>
+                </div>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Autorités de certification</h2>
+
+            <ul style="margin-top: 2em">
+                <li class="fragment">Tiers de confiance</li>
+                <li class="fragment">Verisign, Thawte, <span class="fragment"><span class="orange">Moi</span>...</span>
+                </li>
+                <li class="fragment">Pourquoi leur faire confiance ?</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Certificat compromis</h2>
+
+            <div data-svg-fragment="myAssets/images/compromission.svg#[*|label=base]">
+                <a class="fragment" title="[*|label=frag1]"></a>
+                <a class="fragment" title="[*|label=frag2]"></a>
+            </div>
+        </section>
+
+        <section>
+            <h2>Liste de révocations</h2>
+
+            <ul style="margin-top: 2em">
+                <li class="fragment">Éditée par les CA</li>
+                <li class="fragment">Gestion délicate</li>
+                <li class="fragment"><span class="green">OCSP</span> : <span class="orange">O</span>nline <span
+                        class="orange">C</span>ertificate <span class="orange">S</span>tatus <span
+                        class="orange">P</span>rotocol
+                </li>
+                <li style="text-decoration:line-through" class="fragment"><span class="green">DANE</span> : <span
+                        class="orange">D</span>NS-based <span class="orange">A</span>utihentication of <span
+                        class="orange">N</span>amed <span class="orange">E</span>ntities
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Let's Encrypt</h2>
+
+            <ul style="margin-top: 2em">
+                <li class="fragment">Autorité de certification</li>
+                <li class="fragment">Automatiser la livraison de certificats</li>
+                <li class="fragment">Certificats validé par domaine</li>
+                <li class="fragment" style="text-decoration:line-through;">Certificats à validation étendue</li>
+                <li class="fragment" style="text-decoration:line-through;">Certificats génériques</li>
+                <li class="fragment"><span class="green">ACME</span> : <span class="orange">A</span>utomated <span
+                        class="orange">C</span>ertificate <span class="orange">M</span>anagement <span
+                        class="orange">E</span>nvironment
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Let's Encrypt</h2>
+
+            <img style="margin-top: 4em; margin-bottom: 10em" src="myAssets/images/howitworks_challenge.png">
+        </section>
+
+        <section>
+            <h2>Let's Encrypt</h2>
+
+            <img style="margin-top: 2em; margin-bottom: 10em" src="myAssets/images/howitworks_authorization.png">
+        </section>
+
+        <section>
+            <h2>Let's Encrypt</h2>
+
+            <img style="margin-top: 3em; margin-bottom: 10em" src="myAssets/images/howitworks_certificate.png">
+        </section>
+
+        <section>
+            <h2>Let's Encrypt</h2>
+
+            <img style="margin-top: 1em; margin-bottom: 10em" src="myAssets/images/howitworks_revocation.png">
+        </section>
+
+        <section>
+            <h1>Merci</h1>
+        </section>
+    </div>
 </div>
 
 <script src="lib/js/head.min.js"></script>
