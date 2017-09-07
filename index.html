@@ -54,6 +54,18 @@
         </section>
 
         <section>
+            <span class="fragment">
+            <pre><code class="java" data-trim style="font-size: 24px;">
+                openssl x509 -noout -text -in certificate.pem
+            </code></pre>
+            </span>
+            <span class="fragment">
+            <pre><code class="java" data-trim style="font-size: 14px;">
+                openssl s_client -connect devfest.fcabestre.fr:443 -showcerts -verify
+            </code></pre>
+            </span>
+        </section>
+        <section>
             <h2>Certificats</h2>
 
             <ul style="margin-top: 2em">
