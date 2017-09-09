@@ -37,6 +37,24 @@
         <section>
             <h2>Voyage au pays de «<span style="color: orange">Let's Encrypt</span>»</h2>
         </section>
+
+        <section>
+            <h2>PKI</h2>
+            <h3>Public Key infrastructure</h3>
+            <ul style="margin-top: 1em">
+                <li class="fragment">Cryptographie asymétrique</li>
+                <li class="fragment">Certificats et confiance</li>
+                <li class="fragment">Autorité de certification</li>
+                <li class="fragment"></li>
+
+            </ul>
+        </section>
+
+        <section>
+            <h2>Please</h2>
+            <img src="myAssets/images/please.jpeg" style="margin-top: 1em;">
+        </section>
+
         <section>
             <h2>Chiffrement assymétrique</h2>
 
@@ -54,18 +72,6 @@
         </section>
 
         <section>
-            <span class="fragment">
-            <pre><code class="java" data-trim style="font-size: 24px;">
-                openssl x509 -noout -text -in certificate.pem
-            </code></pre>
-            </span>
-            <span class="fragment">
-            <pre><code class="java" data-trim style="font-size: 14px;">
-                openssl s_client -connect devfest.fcabestre.fr:443 -showcerts -verify
-            </code></pre>
-            </span>
-        </section>
-        <section>
             <h2>Certificats</h2>
 
             <ul style="margin-top: 2em">
@@ -74,6 +80,254 @@
                 <li class="fragment">Cryptographiquement signé</li>
                 <li class="fragment">Norme X.509</li>
             </ul>
+        </section>
+
+        <section>
+            <h2>DER</h2>
+            <pre style="overflow-x: hidden; border: none; color: #dcdcdc; background: #3f3f3f; font-size: 14px; margin-bottom: 100%"">
+	*�H��@�����5���X[/wS�G0
+0J1
+0	UUS10U
+�0��H�Z010Udevfest.cabestre.fr0�"00
+��B��N�6d�Z4Rh�B��=ɯ&g!ƣ15���g�����I�7TH\
+z�ܕL\���wl/D- *����F�]�|r&�Yf��*������
+�*�G����^�G6)%-�Pî��9��q��TZx4��y���-΃�-d��rG����v@�=K��o�]��장�4u����.q�b�|�YM�����-��a�Ǆ�؇V_��0�0U��0U%0++0
+U�00U
+ի��P�;YŠN,Е&�0U#0��Jjc}ݺ��9��Ee�����0o+c0a0.+0�"http://ocsp.int-x3.letsencrypt.org0/+0�#http://cert.int-x3.letsencrypt.org/0U0�devfest.cabestre.fr0��U ��0��g�
+0��
++��0��0&+http://cps.letsencrypt.org0��+0��
+��This Certificate may only be relied upon by Relying Parties and only in accordance with the Certificate Policy found at https://letscrypt.*�H�repository/0
+�%6�ҭ:�55R-`��>�>2K��t";���Zu��s҂���cC>�pu��� ��`�)�Zy����tm}�9E�Y����@�����#
+��o@��]��f0#�ja�\l��ZQ,�}H%,-2�wqp�VH��P��\h������/���3�~�_X�B+1fm��=��^x.�"�_���$1��W]H7��V���I��Gg����B�x�P2��6�rҷ3�{��$NR�7��&�����98�AZ#
+            </pre>
+        </section>
+
+        <section>
+            <h2>PEM</h2>
+            <pre style="border: none; color: #dcdcdc; background: #3f3f3f; font-size: 14px; margin-bottom: 100%"">
+
+                    -----BEGIN CERTIFICATE-----
+                    MIIFCTCCA/GgAwIBAgISA0CRn/zayDX9+6NYWy93U/RHMA0GCSqGSIb3DQEBCwUA
+                    MEoxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MSMwIQYDVQQD
+                    ExpMZXQncyBFbmNyeXB0IEF1dGhvcml0eSBYMzAeFw0xNzA5MDMwODEzMDBaFw0x
+                    NzEyMDIwODEzMDBaMB4xHDAaBgNVBAMTE2RldmZlc3QuY2FiZXN0cmUuZnIwggEi
+                    MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDacAn+5iBf9bhEjaSB1yyBNuZk
+                    hw1VSSAaDxeTTvg2ZJdaBTRSF2i0QrQEA6M9ya8FJmchxqMxNbjCDpoa4GfRBg6a
+                    4cPhSRUG1zdUSFwADZ/NQo0Kev7clUxc5ZXOd2wvRAAtICqSFLzxokaaXYl8cgEm
+                    nlkUzBtmhqsqlYr0FbOjhRcM+yrER454Efsa4fqRXslHDhI2KSUtjFAVw66blzkH
+                    8IdxmIJUWng09sl5oZQVGO4tzoPaLRJk9rdyR/6fGymEHf2pdkDxPUvi5m/4XRGm
+                    1+yepXQIzTQQdfjyvLASjloucbtisXy+WU0b6bH1x/stwsBhuxXHhN7Yh1ZfAgMB
+                    AAGjggITMIICDzAOBgNVHQ8BAf8EBAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwEG
+                    CCsGAQUFBwMCMAwGA1UdEwEB/wQCMAAwHQYDVR0OBBYEFAoP1asepOBQ/ztZxaBO
+                    HSzQlSaJMB8GA1UdIwQYMBaAFKhKamMEfd265tE5t6ZFZe/zqOyhMG8GCCsGAQUF
+                    BwEBBGMwYTAuBggrBgEFBQcwAYYiaHR0cDovL29jc3AuaW50LXgzLmxldHNlbmNy
+                    eXB0Lm9yZzAvBggrBgEFBQcwAoYjaHR0cDovL2NlcnQuaW50LXgzLmxldHNlbmNy
+                    eXB0Lm9yZy8wHgYDVR0RBBcwFYITZGV2ZmVzdC5jYWJlc3RyZS5mcjCB/gYDVR0g
+                    BIH2MIHzMAgGBmeBDAECATCB5gYLKwYBBAGC3xMBAQEwgdYwJgYIKwYBBQUHAgEW
+                    Gmh0dHA6Ly9jcHMubGV0c2VuY3J5cHQub3JnMIGrBggrBgEFBQcCAjCBngyBm1Ro
+                    aXMgQ2VydGlmaWNhdGUgbWF5IG9ubHkgYmUgcmVsaWVkIHVwb24gYnkgUmVseWlu
+                    ZyBQYXJ0aWVzIGFuZCBvbmx5IGluIGFjY29yZGFuY2Ugd2l0aCB0aGUgQ2VydGlm
+                    aWNhdGUgUG9saWN5IGZvdW5kIGF0IGh0dHBzOi8vbGV0c2VuY3J5cHQub3JnL3Jl
+                    cG9zaXRvcnkvMA0GCSqGSIb3DQEBCwUAA4IBAQAlNovSrTraNTVSLWDU8j6nPjJL
+                    qgb6dCI7Bdz6BahadRG+oXPSgtbur2NDPqBwde/+/CD5Fdtg7yn9Wnm5thL90XRt
+                    fb45RYYWWdXlAIHHQBqeGRm30+W5Iwq94h9vGUCC012h+GYwI9sSamH9XGyH6VpR
+                    75CFLPR9B0glLC0HMhQakR53cXCGVkjpFu0AUAWqt1wEaO33iYmkmi+42gWdM/N+
+                    jV9YkUIrMWZtzRkFrz3Ly154LsIi518U4oka3CQxyMdXXUg3utRWlpIcowdJmtRH
+                    Z8CKkpxC2niWUDLV8DYC13LStzPue/+jJE5S5DeMEoAmvryogZA5OM9BWhTW
+                    -----END CERTIFICATE-----
+
+            </pre>
+        </section>
+
+        <section>
+            <h2>Le couteau suisse</h2>
+            <img src="myAssets/images/suisse.jpeg" class="fragment" style="margin-top: 1em; margin-bottom: 100%"">
+        </section>
+
+        <section>
+            <h2>Le couteau suisse</h2>
+            <pre style="border: none; color: #dcdcdc; background: #3f3f3f; font-size: 30px; margin-top: 4em; margin-bottom: 100%">
+
+ openssl x509 -noout -text -in certificate.pem
+            </pre>
+        </section>
+
+        <section>
+            <pre style="border: none; color: #dcdcdc; background: #3f3f3f; font-size: 14px; margin-bottom: 100%"">
+
+    Certificate:
+        Data:
+            Version: 3 (0x2)
+            Serial Number:
+                03:40:91:9f:fc:da:c8:35:fd:fb:a3:58:5b:2f:77:53:f4:47
+        Signature Algorithm: sha256WithRSAEncryption
+            Issuer: C=US, O=Let's Encrypt, CN=Let's Encrypt Authority X3
+            Validity
+                Not Before: Sep  3 08:13:00 2017 GMT
+                Not After : Dec  2 08:13:00 2017 GMT
+            <span style="color: #268bd2">Subject: CN=devfest.cabestre.fr</span>
+            Subject Public Key Info:
+                Public Key Algorithm: rsaEncryption
+                    Public-Key: (2048 bit)
+                    Modulus:
+                        00:da:70:09:fe:e6:20:5f:f5:b8:44:8d:a4:81:d7:
+                        2c:81:36:e6:64:87:0d:55:49:20:1a:0f:17:93:4e:
+                        f8:36:64:97:5a:05:34:52:17:68:b4:42:b4:04:03:
+                        a3:3d:c9:af:05:26:67:21:c6:a3:31:35:b8:c2:0e:
+                        9a:1a:e0:67:d1:06:0e:9a:e1:c3:e1:49:15:06:d7:
+                        37:54:48:5c:00:0d:9f:cd:42:8d:0a:7a:fe:dc:95:
+                        4c:5c:e5:95:ce:77:6c:2f:44:00:2d:20:2a:92:14:
+                        bc:f1:a2:46:9a:5d:89:7c:72:01:26:9e:59:14:cc:
+                        1b:66:86:ab:2a:95:8a:f4:15:b3:a3:85:17:0c:fb:
+                        2a:c4:47:8e:78:11:fb:1a:e1:fa:91:5e:c9:47:0e:
+                        12:36:29:25:2d:8c:50:15:c3:ae:9b:97:39:07:f0:
+                        87:71:98:82:54:5a:78:34:f6:c9:79:a1:94:15:18:
+                        ee:2d:ce:83:da:2d:12:64:f6:b7:72:47:fe:9f:1b:
+                        29:84:1d:fd:a9:76:40:f1:3d:4b:e2:e6:6f:f8:5d:
+                        11:a6:d7:ec:9e:a5:74:08:cd:34:10:75:f8:f2:bc:
+                        b0:12:8e:5a:2e:71:bb:62:b1:7c:be:59:4d:1b:e9:
+                        b1:f5:c7:fb:2d:c2:c0:61:bb:15:c7:84:de:d8:87:
+                        56:5f
+                    Exponent: 65537 (0x10001)
+
+            </pre>
+        </section>
+
+        <section>
+            <pre style="border: none; color: #dcdcdc; background: #3f3f3f; font-size: 14px; margin-bottom: 100%"">
+
+    Certificate:
+        Data:
+            Version: 3 (0x2)
+            Serial Number:
+                03:40:91:9f:fc:da:c8:35:fd:fb:a3:58:5b:2f:77:53:f4:47
+        Signature Algorithm: sha256WithRSAEncryption
+            Issuer: C=US, O=Let's Encrypt, CN=Let's Encrypt Authority X3
+            Validity
+                Not Before: Sep  3 08:13:00 2017 GMT
+                Not After : Dec  2 08:13:00 2017 GMT
+            Subject: CN=devfest.cabestre.fr
+            <span style="color: #268bd2">Subject Public Key Info:
+                Public Key Algorithm: rsaEncryption
+                    Public-Key: (2048 bit)
+                    Modulus:
+                        00:da:70:09:fe:e6:20:5f:f5:b8:44:8d:a4:81:d7:
+                        2c:81:36:e6:64:87:0d:55:49:20:1a:0f:17:93:4e:
+                        f8:36:64:97:5a:05:34:52:17:68:b4:42:b4:04:03:
+                        a3:3d:c9:af:05:26:67:21:c6:a3:31:35:b8:c2:0e:
+                        9a:1a:e0:67:d1:06:0e:9a:e1:c3:e1:49:15:06:d7:
+                        37:54:48:5c:00:0d:9f:cd:42:8d:0a:7a:fe:dc:95:
+                        4c:5c:e5:95:ce:77:6c:2f:44:00:2d:20:2a:92:14:
+                        bc:f1:a2:46:9a:5d:89:7c:72:01:26:9e:59:14:cc:
+                        1b:66:86:ab:2a:95:8a:f4:15:b3:a3:85:17:0c:fb:
+                        2a:c4:47:8e:78:11:fb:1a:e1:fa:91:5e:c9:47:0e:
+                        12:36:29:25:2d:8c:50:15:c3:ae:9b:97:39:07:f0:
+                        87:71:98:82:54:5a:78:34:f6:c9:79:a1:94:15:18:
+                        ee:2d:ce:83:da:2d:12:64:f6:b7:72:47:fe:9f:1b:
+                        29:84:1d:fd:a9:76:40:f1:3d:4b:e2:e6:6f:f8:5d:
+                        11:a6:d7:ec:9e:a5:74:08:cd:34:10:75:f8:f2:bc:
+                        b0:12:8e:5a:2e:71:bb:62:b1:7c:be:59:4d:1b:e9:
+                        b1:f5:c7:fb:2d:c2:c0:61:bb:15:c7:84:de:d8:87:
+                        56:5f
+                    Exponent: 65537 (0x10001)</span>
+
+            </pre>
+        </section>
+
+        <section>
+            <pre style="border: none; color: #dcdcdc; background: #3f3f3f; font-size: 14px; margin-bottom: 100%"">
+
+    Certificate:
+        Data:
+            Version: 3 (0x2)
+            Serial Number:
+                03:40:91:9f:fc:da:c8:35:fd:fb:a3:58:5b:2f:77:53:f4:47
+        Signature Algorithm: sha256WithRSAEncryption
+            Issuer: C=US, O=Let's Encrypt, CN=Let's Encrypt Authority X3
+            <span style="color: #268bd2">Validity
+                Not Before: Sep  3 08:13:00 2017 GMT
+                Not After : Dec  2 08:13:00 2017 GMT</span>
+            Subject: CN=devfest.cabestre.fr
+            Subject Public Key Info:
+                Public Key Algorithm: rsaEncryption
+                    Public-Key: (2048 bit)
+                    Modulus:
+                        00:da:70:09:fe:e6:20:5f:f5:b8:44:8d:a4:81:d7:
+                        2c:81:36:e6:64:87:0d:55:49:20:1a:0f:17:93:4e:
+                        f8:36:64:97:5a:05:34:52:17:68:b4:42:b4:04:03:
+                        a3:3d:c9:af:05:26:67:21:c6:a3:31:35:b8:c2:0e:
+                        9a:1a:e0:67:d1:06:0e:9a:e1:c3:e1:49:15:06:d7:
+                        37:54:48:5c:00:0d:9f:cd:42:8d:0a:7a:fe:dc:95:
+                        4c:5c:e5:95:ce:77:6c:2f:44:00:2d:20:2a:92:14:
+                        bc:f1:a2:46:9a:5d:89:7c:72:01:26:9e:59:14:cc:
+                        1b:66:86:ab:2a:95:8a:f4:15:b3:a3:85:17:0c:fb:
+                        2a:c4:47:8e:78:11:fb:1a:e1:fa:91:5e:c9:47:0e:
+                        12:36:29:25:2d:8c:50:15:c3:ae:9b:97:39:07:f0:
+                        87:71:98:82:54:5a:78:34:f6:c9:79:a1:94:15:18:
+                        ee:2d:ce:83:da:2d:12:64:f6:b7:72:47:fe:9f:1b:
+                        29:84:1d:fd:a9:76:40:f1:3d:4b:e2:e6:6f:f8:5d:
+                        11:a6:d7:ec:9e:a5:74:08:cd:34:10:75:f8:f2:bc:
+                        b0:12:8e:5a:2e:71:bb:62:b1:7c:be:59:4d:1b:e9:
+                        b1:f5:c7:fb:2d:c2:c0:61:bb:15:c7:84:de:d8:87:
+                        56:5f
+                    Exponent: 65537 (0x10001)
+
+            </pre>
+        </section>
+
+        <section>
+            <pre style="border: none; color: #dcdcdc; background: #3f3f3f; font-size: 14px; margin-top: 2em; margin-bottom: 100%"">
+
+    X509v3 extensions:
+        X509v3 Key Usage: critical
+            Digital Signature, Key Encipherment
+        X509v3 Extended Key Usage:
+            TLS Web Server Authentication, TLS Web Client Authentication
+        X509v3 Basic Constraints: critical
+            CA:FALSE
+        X509v3 Subject Key Identifier:
+            0A:0F:D5:AB:1E:A4:E0:50:FF:3B:59:C5:A0:4E:1D:2C:D0:95:26:89
+        X509v3 Authority Key Identifier:
+            keyid:A8:4A:6A:63:04:7D:DD:BA:E6:D1:39:B7:A6:45:65:EF:F3:A8:EC:A1
+
+        Authority Information Access:
+            OCSP - URI:http://ocsp.int-x3.letsencrypt.org
+            CA Issuers - URI:http://cert.int-x3.letsencrypt.org/
+
+        X509v3 Subject Alternative Name:
+            DNS:devfest.cabestre.fr
+        X509v3 Certificate Policies:
+            Policy: 2.23.140.1.2.1
+            Policy: 1.3.6.1.4.1.44947.1.1.1
+        CPS: http://cps.letsencrypt.org
+        User Notice:
+            Explicit Text: This Certificate may only be relied upon by Relying Parties and only
+            in accordance with the Certificate Policy found at https://letsencrypt.org/repository/
+
+            </pre>
+        </section>
+
+        <section>
+            <pre style="border: none; color: #dcdcdc; background: #3f3f3f; font-size: 14px; margin-top: 3em; margin-bottom: 100%"">
+
+    Signature Algorithm: sha256WithRSAEncryption
+        25:36:8b:d2:ad:3a:da:35:35:52:2d:60:d4:f2:3e:a7:3e:32:
+        4b:aa:06:fa:74:22:3b:05:dc:fa:05:a8:5a:75:11:be:a1:73:
+        d2:82:d6:ee:af:63:43:3e:a0:70:75:ef:fe:fc:20:f9:15:db:
+        60:ef:29:fd:5a:79:b9:b6:12:fd:d1:74:6d:7d:be:39:45:86:
+        16:59:d5:e5:00:81:c7:40:1a:9e:19:19:b7:d3:e5:b9:23:0a:
+        bd:e2:1f:6f:19:40:82:d3:5d:a1:f8:66:30:23:db:12:6a:61:
+        fd:5c:6c:87:e9:5a:51:ef:90:85:2c:f4:7d:07:48:25:2c:2d:
+        07:32:14:1a:91:1e:77:71:70:86:56:48:e9:16:ed:00:50:05:
+        aa:b7:5c:04:68:ed:f7:89:89:a4:9a:2f:b8:da:05:9d:33:f3:
+        7e:8d:5f:58:91:42:2b:31:66:6d:cd:19:05:af:3d:cb:cb:5e:
+        78:2e:c2:22:e7:5f:14:e2:89:1a:dc:24:31:c8:c7:57:5d:48:
+        37:ba:d4:56:96:92:1c:a3:07:49:9a:d4:47:67:c0:8a:92:9c:
+        42:da:78:96:50:32:d5:f0:36:02:d7:72:d2:b7:33:ee:7b:ff:
+        a3:24:4e:52:e4:37:8c:12:80:26:be:bc:a8:81:90:39:38:cf:
+        41:5a:14:d6
+
+            </pre>
         </section>
 
         <section>
