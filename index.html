@@ -59,15 +59,36 @@
             <h2>Chiffrement assymétrique</h2>
 
             <ul style="margin-top: 1em">
-                <li class="fragment">Clef privée + publique</li>
+                <li class="fragment">Deux clef distinctes</li>
+                <li class="fragment">Mathématiquement liées</li>
+                <li class="fragment">Non déductibles</li>
+                <li class="fragment">Privée + publique</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Chiffrement assymétrique</h2>
+
+            <ul>
                 <div data-svg-fragment="myAssets/images/assymétrique.svg#[*|label=toto]">
                     <a class="fragment" title="[*|label=base]"></a>
                     <a class="fragment" title="[*|label=frag1]"></a>
                     <a class="fragment" title="[*|label=frag2]"></a>
+                    <a class="fragment" title="[*|label=frag3]"></a>
+                    <a class="fragment" title="[*|label=frag4]"></a>
                 </div>
-                <li class="fragment">Lent<span class="fragment"> ⇒ Signature</span></li>
-                <li class="fragment">RSA, DSA</li>
-                <li class="fragment">ECDSA</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Chiffrement assymétrique</h2>
+
+            <ul style="margin-top: 1em">
+                <li class="fragment">Résoud distribution de clefs</span></li>
+                <li class="fragment" style="margin-bottom: 1em">Lent<span class="fragment"> ⇒ Signature</span></li>
+                <li class="fragment"><span class="orange">D</span>igital <span class="orange">S</span>ignature <span class="orange">A</span>lgorithm</li>
+                <li class="fragment"><span class="orange">R</span>ivest - <span class="orange">S</span>hamir - <span class="orange">A</span>delman</li>
+                <li class="fragment"><span class="orange">E</span>lliptic <span class="orange">C</span>urve <span class="orange">DSA</span></li>
             </ul>
         </section>
 
@@ -75,16 +96,25 @@
             <h2>Certificats</h2>
 
             <ul style="margin-top: 2em">
-                <li class="fragment">Enrobage de clef publique</li>
+                <li class="fragment">Clef publique ↔ sujet</li>
                 <li class="fragment">Méta données</li>
-                <li class="fragment">Cryptographiquement signé</li>
-                <li class="fragment">Norme X.509</li>
+                <li class="fragment">Signé</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Certificats</h2>
+
+            <ul style="margin-top: 2em">
+                <li class="fragment">Normé (X.509 & RFC 5280)</li>
+                <li class="fragment">ASN.1</li>
+                <li class="fragment">DER et PEM</li>
             </ul>
         </section>
 
         <section>
             <h2>DER</h2>
-            <pre style="overflow-x: hidden; border: none; color: #dcdcdc; background: #3f3f3f; font-size: 14px; margin-bottom: 100%"">
+            <pre style="overflow-x: hidden; border: none; color: #dcdcdc; background: #002b36; font-size: 14px; margin-bottom: 100%"">
 	*�H��@�����5���X[/wS�G0
 0J1
 0	UUS10U
@@ -104,7 +134,7 @@ z�ܕL\���wl/D- *����F�]�|r&�Yf��*������
 
         <section>
             <h2>PEM</h2>
-            <pre style="border: none; color: #dcdcdc; background: #3f3f3f; font-size: 14px; margin-bottom: 100%"">
+            <pre style="border: none; color: #dcdcdc; background: #002b36; font-size: 14px; margin-bottom: 100%"">
 
                     -----BEGIN CERTIFICATE-----
                     MIIFCTCCA/GgAwIBAgISA0CRn/zayDX9+6NYWy93U/RHMA0GCSqGSIb3DQEBCwUA
@@ -146,14 +176,22 @@ z�ܕL\���wl/D- *����F�]�|r&�Yf��*������
 
         <section>
             <h2>Le couteau suisse</h2>
-            <pre style="border: none; color: #dcdcdc; background: #3f3f3f; font-size: 30px; margin-top: 4em; margin-bottom: 100%">
+            <pre style="border: none; color: #dcdcdc; background: #002b36; font-size: 24px; margin-top: 4em">
 
- openssl x509 -noout -text -in certificate.pem
+   openssl x509 -noout -text -in <span style="font-style: oblique"> [-inform der]</span> certificate
             </pre>
+            <span  class="fragment">
+            <pre style="border: none; color: #dcdcdc; background: #002b36; font-size: 20px; margin-top: 1em; margin-bottom: 100%">
+
+    openssl x509 -inform der -outform pem -in cert.der -out cert.pem
+    openssl x509 -inform pem -outform der -in cert.pem -out cert.der
+            </pre>
+
+            </span>
         </section>
 
         <section>
-            <pre style="border: none; color: #dcdcdc; background: #3f3f3f; font-size: 14px; margin-bottom: 100%"">
+            <pre style="border: none; color: #dcdcdc; background: #002b36; font-size: 14px; margin-bottom: 100%"">
 
     Certificate:
         Data:
@@ -165,7 +203,7 @@ z�ܕL\���wl/D- *����F�]�|r&�Yf��*������
             Validity
                 Not Before: Sep  3 08:13:00 2017 GMT
                 Not After : Dec  2 08:13:00 2017 GMT
-            <span style="color: #268bd2">Subject: CN=devfest.cabestre.fr</span>
+            <span style="color: #859900">Subject: CN=devfest.cabestre.fr</span>
             Subject Public Key Info:
                 Public Key Algorithm: rsaEncryption
                     Public-Key: (2048 bit)
@@ -194,7 +232,7 @@ z�ܕL\���wl/D- *����F�]�|r&�Yf��*������
         </section>
 
         <section>
-            <pre style="border: none; color: #dcdcdc; background: #3f3f3f; font-size: 14px; margin-bottom: 100%"">
+            <pre style="border: none; color: #dcdcdc; background: #002b36; font-size: 14px; margin-bottom: 100%"">
 
     Certificate:
         Data:
@@ -207,7 +245,7 @@ z�ܕL\���wl/D- *����F�]�|r&�Yf��*������
                 Not Before: Sep  3 08:13:00 2017 GMT
                 Not After : Dec  2 08:13:00 2017 GMT
             Subject: CN=devfest.cabestre.fr
-            <span style="color: #268bd2">Subject Public Key Info:
+            <span style="color: #859900">Subject Public Key Info:
                 Public Key Algorithm: rsaEncryption
                     Public-Key: (2048 bit)
                     Modulus:
@@ -235,7 +273,7 @@ z�ܕL\���wl/D- *����F�]�|r&�Yf��*������
         </section>
 
         <section>
-            <pre style="border: none; color: #dcdcdc; background: #3f3f3f; font-size: 14px; margin-bottom: 100%"">
+            <pre style="border: none; color: #dcdcdc; background: #002b36; font-size: 14px; margin-bottom: 100%"">
 
     Certificate:
         Data:
@@ -244,7 +282,7 @@ z�ܕL\���wl/D- *����F�]�|r&�Yf��*������
                 03:40:91:9f:fc:da:c8:35:fd:fb:a3:58:5b:2f:77:53:f4:47
         Signature Algorithm: sha256WithRSAEncryption
             Issuer: C=US, O=Let's Encrypt, CN=Let's Encrypt Authority X3
-            <span style="color: #268bd2">Validity
+            <span style="color: #859900">Validity
                 Not Before: Sep  3 08:13:00 2017 GMT
                 Not After : Dec  2 08:13:00 2017 GMT</span>
             Subject: CN=devfest.cabestre.fr
@@ -276,13 +314,13 @@ z�ܕL\���wl/D- *����F�]�|r&�Yf��*������
         </section>
 
         <section>
-            <pre style="border: none; color: #dcdcdc; background: #3f3f3f; font-size: 14px; margin-top: 2em; margin-bottom: 100%"">
+            <pre style="border: none; color: #dcdcdc; background: #002b36; font-size: 14px; margin-top: 2em; margin-bottom: 100%"">
 
     X509v3 extensions:
         X509v3 Key Usage: critical
-            Digital Signature, Key Encipherment
+            <span style="color: #859900">Digital Signature, Key Encipherment</span>
         X509v3 Extended Key Usage:
-            TLS Web Server Authentication, TLS Web Client Authentication
+            <span style="color: #859900">TLS Web Server Authentication, TLS Web Client Authentication</span>
         X509v3 Basic Constraints: critical
             CA:FALSE
         X509v3 Subject Key Identifier:
@@ -308,9 +346,41 @@ z�ܕL\���wl/D- *����F�]�|r&�Yf��*������
         </section>
 
         <section>
-            <pre style="border: none; color: #dcdcdc; background: #3f3f3f; font-size: 14px; margin-top: 3em; margin-bottom: 100%"">
+            <pre style="border: none; color: #dcdcdc; background: #002b36; font-size: 14px; margin-top: 2em; margin-bottom: 100%"">
 
-    Signature Algorithm: sha256WithRSAEncryption
+    X509v3 extensions:
+        X509v3 Key Usage: critical
+            Digital Signature, Key Encipherment
+        X509v3 Extended Key Usage:
+            TLS Web Server Authentication, TLS Web Client Authentication
+        X509v3 Basic Constraints: critical
+            CA:FALSE
+        X509v3 Subject Key Identifier:
+            0A:0F:D5:AB:1E:A4:E0:50:FF:3B:59:C5:A0:4E:1D:2C:D0:95:26:89
+        X509v3 Authority Key Identifier:
+            keyid:A8:4A:6A:63:04:7D:DD:BA:E6:D1:39:B7:A6:45:65:EF:F3:A8:EC:A1
+
+        Authority Information Access:
+            OCSP - URI:http://ocsp.int-x3.letsencrypt.org
+            CA Issuers - URI:http://cert.int-x3.letsencrypt.org/
+
+        X509v3 Subject Alternative Name:
+            <span style="color: #859900">DNS:devfest.cabestre.fr</span>
+        X509v3 Certificate Policies:
+            Policy: 2.23.140.1.2.1
+            Policy: 1.3.6.1.4.1.44947.1.1.1
+        CPS: http://cps.letsencrypt.org
+        User Notice:
+            Explicit Text: This Certificate may only be relied upon by Relying Parties and only
+            in accordance with the Certificate Policy found at https://letsencrypt.org/repository/
+
+            </pre>
+        </section>
+
+        <section>
+            <pre style="border: none; color: #dcdcdc; background: #002b36; font-size: 14px; margin-top: 3em; margin-bottom: 100%"">
+
+    Signature Algorithm: <span style="color: #859900">sha256WithRSAEncryption</span>
         25:36:8b:d2:ad:3a:da:35:35:52:2d:60:d4:f2:3e:a7:3e:32:
         4b:aa:06:fa:74:22:3b:05:dc:fa:05:a8:5a:75:11:be:a1:73:
         d2:82:d6:ee:af:63:43:3e:a0:70:75:ef:fe:fc:20:f9:15:db:
@@ -326,6 +396,29 @@ z�ܕL\���wl/D- *����F�]�|r&�Yf��*������
         42:da:78:96:50:32:d5:f0:36:02:d7:72:d2:b7:33:ee:7b:ff:
         a3:24:4e:52:e4:37:8c:12:80:26:be:bc:a8:81:90:39:38:cf:
         41:5a:14:d6
+
+            </pre>
+        </section>
+
+        <section>
+            <pre style="border: none; color: #dcdcdc; background: #002b36; font-size: 14px; margin-top: 3em; margin-bottom: 100%"">
+
+    Signature Algorithm: sha256WithRSAEncryption
+        <span style="color: #859900">25:36:8b:d2:ad:3a:da:35:35:52:2d:60:d4:f2:3e:a7:3e:32:
+        4b:aa:06:fa:74:22:3b:05:dc:fa:05:a8:5a:75:11:be:a1:73:
+        d2:82:d6:ee:af:63:43:3e:a0:70:75:ef:fe:fc:20:f9:15:db:
+        60:ef:29:fd:5a:79:b9:b6:12:fd:d1:74:6d:7d:be:39:45:86:
+        16:59:d5:e5:00:81:c7:40:1a:9e:19:19:b7:d3:e5:b9:23:0a:
+        bd:e2:1f:6f:19:40:82:d3:5d:a1:f8:66:30:23:db:12:6a:61:
+        fd:5c:6c:87:e9:5a:51:ef:90:85:2c:f4:7d:07:48:25:2c:2d:
+        07:32:14:1a:91:1e:77:71:70:86:56:48:e9:16:ed:00:50:05:
+        aa:b7:5c:04:68:ed:f7:89:89:a4:9a:2f:b8:da:05:9d:33:f3:
+        7e:8d:5f:58:91:42:2b:31:66:6d:cd:19:05:af:3d:cb:cb:5e:
+        78:2e:c2:22:e7:5f:14:e2:89:1a:dc:24:31:c8:c7:57:5d:48:
+        37:ba:d4:56:96:92:1c:a3:07:49:9a:d4:47:67:c0:8a:92:9c:
+        42:da:78:96:50:32:d5:f0:36:02:d7:72:d2:b7:33:ee:7b:ff:
+        a3:24:4e:52:e4:37:8c:12:80:26:be:bc:a8:81:90:39:38:cf:
+        41:5a:14:d6</span>
 
             </pre>
         </section>
@@ -411,6 +504,12 @@ z�ܕL\���wl/D- *����F�]�|r&�Yf��*������
                         class="orange">E</span>nvironment
                 </li>
             </ul>
+        </section>
+
+        <section>
+            <h2>ACME</h2>
+
+            <img style="margin-top: 1em; margin-bottom: 10em" src="myAssets/images/coyote2.jpeg">
         </section>
 
         <section>
