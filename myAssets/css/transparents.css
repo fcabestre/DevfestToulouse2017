@@ -320,6 +320,12 @@ body {
 .reveal .green {
   color: #859900; }
 
+.reveal .yellow {
+  color: #b58900; }
+
+.reveal .magenta {
+  color: #d33682; }
+
 .reveal .slides section img {
   margin: 15px 0;
   border: none;
