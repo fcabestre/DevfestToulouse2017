@@ -18,13 +18,29 @@
   <defs
      id="defs5722">
     <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker4284"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4286"
+         style="fill:#586e75;fill-opacity:1;fill-rule:evenodd;stroke:#586e75;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)" />
+    </marker>
+    <marker
        inkscape:isstock="true"
        style="overflow:visible"
        id="marker5111"
        refX="0"
        refY="0"
        orient="auto"
-       inkscape:stockid="Arrow2Lend">
+       inkscape:stockid="Arrow2Lend"
+       inkscape:collect="always">
       <path
          transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
          d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
@@ -156,14 +172,14 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1"
-     inkscape:cx="101.18987"
-     inkscape:cy="226.62547"
-     inkscape:current-layer="layer1"
+     inkscape:zoom="2"
+     inkscape:cx="252.18987"
+     inkscape:cy="224.62547"
+     inkscape:current-layer="layer2"
      inkscape:document-units="px"
      showgrid="true"
-     inkscape:window-width="1600"
-     inkscape:window-height="874"
+     inkscape:window-width="1920"
+     inkscape:window-height="1027"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -281,17 +297,16 @@
        style="fill:none;fill-opacity:1;stroke:#859900;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path5732" />
     <text
-       transform="translate(-181.88697,107.22474)"
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:25.4344101px;line-height:125%;font-family:'Bitstream Vera Sans';letter-spacing:0px;word-spacing:0px;fill:#859900;fill-opacity:1;stroke:none;stroke-opacity:1"
-       x="402.13687"
-       y="-1.4209282"
+       x="220.24991"
+       y="107.80381"
        id="text5788"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5790"
-         x="402.13687"
-         y="-1.4209282">Root</tspan></text>
+         x="220.24991"
+         y="107.80381">Root</tspan></text>
     <path
        transform="translate(-181.88697,107.22474)"
        style="fill:none;stroke:#586e75;stroke-width:2.54292893;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:none;marker-end:url(#Arrow2Lend)"
@@ -314,20 +329,19 @@
        style="fill:none;fill-opacity:1;stroke:#d33682;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path5732-3" />
     <text
-       transform="translate(-181.88697,107.22474)"
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:25.4344101px;line-height:125%;font-family:'Bitstream Vera Sans';letter-spacing:0px;word-spacing:0px;fill:#d33682;fill-opacity:1;stroke:none"
-       x="406.90582"
-       y="152.04616"
+       x="225.01884"
+       y="259.2709"
        id="text5792"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5794"
-         x="406.90582"
-         y="152.04616">Int1</tspan></text>
+         x="225.01884"
+         y="259.2709">Int1</tspan></text>
     <path
        transform="translate(-181.88697,107.22474)"
-       style="display:inline;fill:none;stroke:#586e75;stroke-width:2.54292893;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker4901)"
+       style="display:inline;fill:none;stroke:#586e75;stroke-width:2.543;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker4284)"
        d="M 431.4895,103.08448 431.13595,34.391892"
        id="path5258"
        inkscape:connector-type="polyline"
