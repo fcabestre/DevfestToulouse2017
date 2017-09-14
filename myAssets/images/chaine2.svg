@@ -14,7 +14,7 @@
    id="svg5720"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="chaine2.svg">
+   sodipodi:docname="chaine.svg">
   <defs
      id="defs5722">
     <marker
@@ -188,7 +188,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="-17.98884"
+     inkscape:cx="225.51116"
      inkscape:cy="274.37661"
      inkscape:current-layer="layer5"
      inkscape:document-units="px"
@@ -216,7 +216,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -405,7 +405,7 @@
          y="107.80381">Root</tspan></text>
     <path
        transform="translate(-181.88697,107.22474)"
-       style="display:inline;fill:none;stroke:#586e75;stroke-width:2.543;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:none;marker-end:url(#Arrow2Lend)"
+       style="display:inline;fill:none;stroke:#586e75;stroke-width:2.54292893;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:none;marker-end:url(#Arrow2Lend)"
        d="M 296.2751,115.53397 399.22932,19.858664"
        id="path3872"
        inkscape:connector-type="polyline"
@@ -426,23 +426,10 @@
      inkscape:label="frag4"
      style="display:inline">
     <path
-       transform="translate(50.071289,20.994141)"
-       style="display:inline;fill:none;fill-rule:evenodd;stroke:#586e75;stroke-width:2.543;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker4371)"
-       d="M 220,73 147,30"
-       id="path3443"
+       style="fill:none;fill-rule:evenodd;stroke:#586e75;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker4371)"
+       d="m 260.07129,120.99413 -70,0 0,-89.999999 110,0 0,45"
+       id="path4368"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
-    <text
-       transform="translate(50.071289,20.994141)"
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#586e75;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="-42"
-       y="8"
-       id="text6081"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan6083"
-         x="-42"
-         y="8">«Turtles all the way down...»</tspan></text>
+       sodipodi:nodetypes="ccccc" />
   </g>
 </svg>
