@@ -43,10 +43,10 @@
             <img src="myAssets/images/europe.jpeg">
         </section>
 
-        <section>
-            <h2>Please</h2>
-            <img src="myAssets/images/please.jpeg" style="margin-top: 1em;">
-        </section>
+        <!--<section>-->
+            <!--<h2>Please</h2>-->
+            <!--<img src="myAssets/images/please.jpeg" style="margin-top: 1em;">-->
+        <!--</section>-->
 
         <section>
             <h2>Chiffrement assymétrique</h2>
@@ -500,64 +500,26 @@ z�ܕL\���wl/D- *����F�]�|r&�Yf��*������
         <section>
             <h2>Chaînes de certification</h2>
 
-            <ul>
-                <div data-svg-fragment="myAssets/images/chaine.svg#[*|label=toto]">
-                    <a class="fragment" title="[*|label=base]"></a>
-                    <a class="fragment" title="[*|label=frag1]"></a>
-                    <a class="fragment" title="[*|label=frag2]"></a>
-                    <a class="fragment" title="[*|label=frag3]"></a>
-                    <a class="fragment" title="[*|label=frag4]"></a>
-                </div>
-            </ul>
+            <div style="margin-left: -60px" data-svg-fragment="myAssets/images/chaine.svg#[*|label=base]">
+                <a class="fragment" title="[*|label=frag1]"></a>
+                <a class="fragment" title="[*|label=frag2]"></a>
+                <a class="fragment" title="[*|label=frag3]"></a>
+                <a class="fragment" title="[*|label=frag4]"></a>
+            </div>
         </section>
 
         <section>
             <h2>Chaînes de certification</h2>
 
-            <ul>
-                <div data-svg-fragment="myAssets/images/chaine2.svg#[*|label=base]">
-                </div>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Confiance</h2>
-            <img src="myAssets/images/FirefoxBis.png">
-        </section>
-
-        <section>
-            <h2>Confiance</h2>
-            <img src="myAssets/images/CaCerts.png">
-        </section>
-
-        <section>
-            <h2>Certificats auto-signés</h2>
-
-            <ul>
-                <li class="fragment">Signature ⇒ clef privée</li>
-                <li class="fragment">Vérification ⇒ clef publique</li>
-                <li class="fragment">Clef publique ⇒ certificat</li>
-                <div data-svg-fragment="myAssets/images/certificat.svg#[*|label=toto]">
-                    <a class="fragment" title="[*|label=base]"></a>
-                    <a class="fragment" title="[*|label=frag1]"></a>
-                </div>
-                <li class="fragment">Confiance ≡ Import explicite</li>
-            </ul>
+            <div style="margin-left: -60px" data-svg-fragment="myAssets/images/chaine2.svg#[*|label=base]">
+            </div>
         </section>
 
         <section>
             <h2>Chaînes de certification</h2>
 
-            <ul>
-                <li class="fragment">Exhaustivité des imports</li>
-                <li class="fragment">Une solution est la délégation</li>
-                <div data-svg-fragment="myAssets/images/chaine.svg#[*|label=toto]">
-                    <a class="fragment" title="[*|label=base]"></a>
-                    <a class="fragment" title="[*|label=frag1]"></a>
-                    <a class="fragment" title="[*|label=frag2]"></a>
-                    <a class="fragment" title="[*|label=frag3]"></a>
-                </div>
-            </ul>
+            <div style="margin-left: -60px" data-svg-fragment="myAssets/images/chaine3.svg#[*|label=base]">
+            </div>
         </section>
 
         <section>
@@ -565,34 +527,96 @@ z�ܕL\���wl/D- *����F�]�|r&�Yf��*������
 
             <ul style="margin-top: 2em">
                 <li class="fragment">Tiers de confiance</li>
-                <li class="fragment">Verisign, Thawte, <span class="fragment"><span class="orange">Moi</span>...</span>
-                </li>
-                <li class="fragment">Pourquoi leur faire confiance ?</li>
+                <li class="fragment">Verisign, IdenTrust, Let's Encrypt…</li>
+                <li class="fragment"><span class="orange">Vous</span> & <span class="orange">Moi</span></li>
+            </ul>
+        </section>
+
+        <section>
+            <pre style="border: none; color: #dcdcdc; background: #002b36; font-size: 14px; margin-top: 3em; margin-bottom: 100%">
+
+      Certificate:
+          …
+          Signature Algorithm: sha256WithRSAEncryption
+              Issuer: O=Digital Signature Trust Co., CN=DST Root CA X3
+              <span class="yellow">Validity
+                  Not Before: Mar 17 16:40:46 2016 GMT
+                  Not After : Mar 17 16:40:46 2021 GMT</span>
+              Subject: C=US, O=Let's Encrypt, CN=Let's Encrypt Authority X3
+              Subject Public Key Info:
+                  Public Key Algorithm: rsaEncryption
+                      Public-Key: (2048 bit)
+                      …
+              X509v3 extensions:
+                  X509v3 Basic Constraints: critical
+                      <span class="yellow">CA:TRUE, pathlen:0</span>
+                  X509v3 Key Usage: critical
+                      <span class="yellow">Digital Signature, Certificate Sign, CRL Sign</span>
+                  Authority Information Access:
+                      OCSP - URI:http://isrg.trustid.ocsp.identrust.com
+                      CA Issuers - URI:http://apps.identrust.com/roots/dstrootcax3.p7c
+
+                  X509v3 Authority Key Identifier:
+                      keyid:C4:A7:B1:A4:7B:2C:71:FA:DB:E1:4B:90:75:FF:C4:15:60:85:89:10
+
+                  X509v3 Certificate Policies:
+                      Policy: 2.23.140.1.2.1
+                      Policy: 1.3.6.1.4.1.44947.1.1.1
+                        CPS: http://cps.root-x1.letsencrypt.org
+
+            </pre>
+        </section>
+
+        <!--<section>-->
+            <!--<h2>Confiance</h2>-->
+            <!--<img src="myAssets/images/kaa.jpeg" style="margin-bottom: 100%">-->
+        <!--</section>-->
+
+        <section>
+            <h2>Confiance</h2>
+            <ul style="margin-top: 2em">
+                <li class="fragment">Comment faire confiance ?</li>
+                <li class="fragment">Ancre de confiance</li>
+                <li class="fragment">Magasin de confiance, «trust store»</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Confiance</h2>
+            <img src="myAssets/images/FirefoxBis.png" style="margin-bottom: 100%">
+        </section>
+
+        <section>
+            <h2>Confiance</h2>
+            <img src="myAssets/images/CaCerts.png" style="margin-bottom: 100%">
+        </section>
+
+        <section>
+            <h2>Types de certification</h2>
+
+            <ul style="margin-top: 2em">
+                <li class="fragment">Validation de domaine</li>
+                <li class="fragment">Validation d'organisation</li>
+                <li class="fragment">Validation étendue</li>
             </ul>
         </section>
 
         <section>
             <h2>Certificat compromis</h2>
 
-            <div data-svg-fragment="myAssets/images/compromission.svg#[*|label=base]">
+            <div  style="margin-bottom: 100%" data-svg-fragment="myAssets/images/compromission.svg#[*|label=base]">
+                <a class="fragment" title="[*|label=frag3]"></a>
                 <a class="fragment" title="[*|label=frag1]"></a>
                 <a class="fragment" title="[*|label=frag2]"></a>
             </div>
         </section>
 
         <section>
-            <h2>Liste de révocations</h2>
+            <h2>Certificat compromis</h2>
 
             <ul style="margin-top: 2em">
-                <li class="fragment">Éditée par les CA</li>
-                <li class="fragment">Gestion délicate</li>
-                <li class="fragment"><span class="green">OCSP</span> : <span class="orange">O</span>nline <span
-                        class="orange">C</span>ertificate <span class="orange">S</span>tatus <span
-                        class="orange">P</span>rotocol
-                </li>
-                <li style="text-decoration:line-through" class="fragment"><span class="green">DANE</span> : <span
-                        class="orange">D</span>NS-based <span class="orange">A</span>utihentication of <span
-                        class="orange">N</span>amed <span class="orange">E</span>ntities
+                <li class="fragment"><span class="orange">C</span>ertificate<span class="orange">R</span>evocation<span class="orange">L</span>ist</li>
+                <li class="fragment"><span class="orange">O</span>nline <span class="orange">C</span>ertificate <span class="orange">S</span>tatus <span class="orange">P</span>rotocol
                 </li>
             </ul>
         </section>
@@ -613,11 +637,11 @@ z�ܕL\���wl/D- *����F�]�|r&�Yf��*������
             </ul>
         </section>
 
-        <section>
-            <h2>ACME</h2>
+        <!--<section>-->
+            <!--<h2>ACME</h2>-->
 
-            <img style="margin-top: 1em; margin-bottom: 10em" src="myAssets/images/coyote2.jpeg">
-        </section>
+            <!--<img style="margin-top: 1em; margin-bottom: 10em" src="myAssets/images/coyote2.jpeg">-->
+        <!--</section>-->
 
         <section>
             <h2>Let's Encrypt</h2>

@@ -14,7 +14,7 @@
    id="svg5720"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="chaine.svg">
+   sodipodi:docname="chaine2.svg">
   <defs
      id="defs5722">
     <marker
@@ -187,10 +187,10 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1"
-     inkscape:cx="225.51116"
-     inkscape:cy="274.37661"
-     inkscape:current-layer="layer5"
+     inkscape:zoom="2"
+     inkscape:cx="267.76116"
+     inkscape:cy="154.37661"
+     inkscape:current-layer="layer2"
      inkscape:document-units="px"
      showgrid="true"
      inkscape:window-width="1600"
@@ -216,7 +216,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -315,20 +315,19 @@
        style="display:inline;fill:none;fill-opacity:1;stroke:#d33682;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path5732-3-2" />
     <text
-       transform="translate(-181.88697,107.22474)"
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:25.4344101px;line-height:125%;font-family:'Bitstream Vera Sans';letter-spacing:0px;word-spacing:0px;display:inline;fill:#d33682;fill-opacity:1;stroke:none"
-       x="407.73895"
-       y="302.99808"
+       x="233.01678"
+       y="410.22281"
        id="text5792-3"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5794-6"
-         x="407.73895"
-         y="302.99808">Int2</tspan><tspan
+         x="233.01678"
+         y="410.22281">C4</tspan><tspan
          sodipodi:role="line"
-         x="407.73895"
-         y="334.79108"
+         x="233.01678"
+         y="442.01581"
          id="tspan3786" /></text>
     <path
        style="display:inline;fill:none;stroke:#586e75;stroke-width:2.54344106;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker4965-9)"
@@ -337,7 +336,17 @@
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="3"
        sodipodi:nodetypes="cc" />
-  </g>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3394"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Sans;font-style:normal;font-weight:normal;font-size:17.5px;line-height:125%;letter-spacing:0px;word-spacing:0px;-inkscape-font-specification:'Sans, Normal';font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"><flowRegion
+         id="flowRegion3396"><rect
+           id="rect3398"
+           width="145"
+           height="90"
+           x="210.07129"
+           y="380.99414" /></flowRegion><flowPara
+         id="flowPara3400"></flowPara></flowRoot>  </g>
   <g
      inkscape:groupmode="layer"
      id="layer3"
@@ -354,14 +363,14 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:25.4344101px;line-height:125%;font-family:'Bitstream Vera Sans';letter-spacing:0px;word-spacing:0px;display:inline;fill:#d33682;fill-opacity:1;stroke:none"
-       x="225.01884"
+       x="233.4142"
        y="259.2709"
        id="text5792"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5794"
-         x="225.01884"
-         y="259.2709">Int1</tspan></text>
+         x="233.4142"
+         y="259.2709">C5</tspan></text>
     <path
        transform="translate(-181.88697,107.22474)"
        style="display:inline;fill:none;stroke:#586e75;stroke-width:2.54344106;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker4965)"
@@ -427,7 +436,7 @@
      style="display:inline">
     <path
        style="fill:none;fill-rule:evenodd;stroke:#586e75;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker4371)"
-       d="m 260.07129,120.99413 -70,0 0,-89.999999 110,0 0,45"
+       d="m 260.07129,120.99413 -27.5,0 0,-89.999999 67.5,0 0,45"
        id="path4368"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccc" />
