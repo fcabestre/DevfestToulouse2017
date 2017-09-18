@@ -39,8 +39,8 @@
         </section>
 
         <section>
-            <h2><span class="orange">P</span>ublic <span class="orange">K</span>ey <span class="orange">I</span>nfrastructure</h2>
-            <img src="myAssets/images/europe.jpeg">
+            <h2>Public Key Infrastructure</h2>
+            <img style="margin-bottom: 100%" src="myAssets/images/europe.jpeg">
         </section>
 
         <!--<section>-->
@@ -54,8 +54,8 @@
             <ul style="margin-top: 1em">
                 <li class="fragment">Deux clef distinctes</li>
                 <li class="fragment">Mathématiquement liées</li>
-                <li class="fragment">Réciproquement non déductibles</li>
-                <li class="fragment">Privée + publique</li>
+                <li class="fragment" style="margin-bottom: 1em">Réciproquement non déductibles</li>
+                <li class="fragment"><span class="yellow">Privée</span> + <span class="blue">publique</span></li>
             </ul>
         </section>
 
@@ -77,9 +77,9 @@
             <ul style="margin-top: 1em">
                 <li class="fragment">Résoud distribution de clefs</span></li>
                 <li class="fragment" style="margin-bottom: 1em">Lent<span class="fragment"> ⇒ Signature</span></li>
-                <li class="fragment"><span class="orange">D</span>igital <span class="orange">S</span>ignature <span class="orange">A</span>lgorithm</li>
-                <li class="fragment"><span class="orange">R</span>ivest - <span class="orange">S</span>hamir - <span class="orange">A</span>delman</li>
-                <li class="fragment"><span class="orange">E</span>lliptic <span class="orange">C</span>urve <span class="orange">DSA</span></li>
+                <li class="fragment"><span class="orange">DSA</span> : Digital Signature Algorithm</li>
+                <li class="fragment"><span class="orange">RSA</span> : Rivest - Shamir - Adelman</li>
+                <li class="fragment"><span class="orange">ECDSA</span> : Elliptic Curve DSA</li>
             </ul>
         </section>
 
@@ -498,7 +498,7 @@ z�ܕL\���wl/D- *����F�]�|r&�Yf��*������
         </section>
 
         <section>
-            <h2>Certificate génériques</h2>
+            <h2>Certificats génériques</h2>
             <ul style="margin-top: 2em">
                 <li class="fragment">Multiples sous-domaines</li>
                 <li class="fragment" style="margin-top: 1em"><span class="red">*</span>.cabestre.fr</li>
@@ -588,11 +588,6 @@ z�ܕL\���wl/D- *����F�]�|r&�Yf��*������
             </pre>
         </section>
 
-        <!--<section>-->
-            <!--<h2>Confiance</h2>-->
-            <!--<img src="myAssets/images/kaa.jpeg" style="margin-bottom: 100%">-->
-        <!--</section>-->
-
         <section>
             <h2>Confiance</h2>
             <ul style="margin-top: 2em">
@@ -613,7 +608,7 @@ z�ܕL\���wl/D- *����F�]�|r&�Yf��*������
         </section>
 
         <section>
-            <h2>Types de certification</h2>
+            <h2>Types de certificats</h2>
 
             <ul style="margin-top: 2em">
                 <li class="fragment">Validation de domaine</li>
@@ -636,8 +631,10 @@ z�ܕL\���wl/D- *����F�]�|r&�Yf��*������
             <h2>Certificat compromis</h2>
 
             <ul style="margin-top: 2em">
-                <li class="fragment"><span class="orange">C</span>ertificate<span class="orange">R</span>evocation<span class="orange">L</span>ist</li>
-                <li class="fragment"><span class="orange">O</span>nline <span class="orange">C</span>ertificate <span class="orange">S</span>tatus <span class="orange">P</span>rotocol
+                <li class="fragment"><span class="orange">CRL</span>
+                <li class="fragment">Certificate Revocation List</li>
+                <li class="fragment" style="margin-top: 1em"><span class="orange">OCSP</span>
+                <li class="fragment">Online Certificate Status Protocol
                 </li>
             </ul>
         </section>
@@ -664,23 +661,31 @@ z�ܕL\���wl/D- *����F�]�|r&�Yf��*������
         <section>
             <h2>Let's Encrypt</h2>
 
-            <ul style="margin-top: 2em">
-                <li class="fragment">ISRG</li>
+            <ul style="margin-top: 1em">
                 <li class="fragment">Autorité de certification</li>
+                <li class="fragment">Service en ligne (API)</li>
                 <li class="fragment">Automatiser la livraison de certificats</li>
-                <li class="fragment">Certificats validé par domaine</li>
+                <li class="fragment" style="margin-top: 1em">Certificats validé par domaine</li>
                 <li class="fragment" style="text-decoration:line-through;">Certificats à validation étendue</li>
                 <li class="fragment" style="text-decoration:line-through;">Certificats génériques</li>
             </ul>
         </section>
 
         <section>
+            <h2>Chaîne de confiance</h2>
+
+            <img style="margin-top: 1em; margin-bottom: 10em" src="myAssets/images/isrg-keys.png">
+        </section>
+
+        <section>
             <h2>ACME</h2>
 
             <ul style="margin-top: 2em">
-                <li class="fragment">IETF</li>
-                <li class="fragment">Certbot / Boulder</li>
-                <li class="fragment">Nombreuses mises en œuvre</li>
+                <li class="fragment"><span class="orange">ISRG</span>: Internet Security Research Group</li>
+                <li class="fragment"><span class="orange">IETF</span>: Internet Egineering Task Force</li>
+                <li class="fragment" style="margin-top: 1em"><span class="green">Certbot</span>: client Python</li>
+                <li class="fragment"><span class="green">Boulder</span>: serveur Go</li>
+                <li class="fragment">Et bien d'autres</li>
             </ul>
         </section>
 
@@ -741,7 +746,10 @@ z�ܕL\���wl/D- *����F�]�|r&�Yf��*������
         </section>
 
         <section>
-            <h1>Merci</h1>
+            <div style="margin-left: 40px; margin-top: 1em; text-align: left" class="green">Frédéric Cabestre</div>
+            <div style="margin-left: 40px; font-size: smaller; text-align: left" class="blue">@fcabestre</div>
+            <div style="margin-left: 40px; text-align: left"><img src="myAssets/images/easymile.png"></div>
+            <h2 style="margin-top: 1em; margin-bottom: 8em">Merci</h2>
         </section>
     </div>
 </div>
