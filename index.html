@@ -661,6 +661,18 @@ zï¿½Ü•L\ï¿½ï¿½ï¿½wl/D- *ï¿½ï¿½ï¿½ï¿½Fï¿½]ï¿½|r&ï¿½Yfï¿½ï¿½*ï¿½ï¿½ï¿½ï¿½ï¿½ï
         </section>
 
         <section>
+            <h2 style="margin-bottom: 1em">Validation</h2>
+             <pre style="border: none; color: #dcdcdc; background: #002b36; font-size: 20px">
+
+  openssl verify -CAfile chain.pem -purpose sslclient certificate.pem
+             </pre>
+             <pre class="fragment" style="margin-bottom: 100%; border: none; color: #dcdcdc; background: #002b36; font-size: 20px; margin-top: 1em">
+
+  openssl s_client -connect devfest.cabestre.fr:80 -showcerts -verify 1
+             </pre>
+        </section>
+
+        <section>
             <h2>Let's Encrypt</h2>
 
             <ul style="margin-top: 1em">
