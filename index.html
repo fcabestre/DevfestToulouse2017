@@ -103,7 +103,7 @@
             <h2>Certificats</h2>
 
             <ul style="margin-top: 2em">
-                <li class="fragment">Clef publique ↔ sujet</li>
+                <li class="fragment">Clef publique ↔ <span class="green">sujet</span></li>
                 <li class="fragment">Méta données</li>
                 <li class="fragment">Numériquement signé</li>
             </ul>
@@ -114,7 +114,7 @@
 
             <ul style="margin-top: 2em">
                 <li class="fragment">Normé (X.509 & RFC 5280)</li>
-                <li class="fragment">Description  ⇒ ASN.1</li>
+                <li class="fragment">Description  ⇒ <span class="green">ASN.1</span></li>
                 <li class="fragment">Codage  ⇒ DER et PEM</li>
             </ul>
         </section>
@@ -502,10 +502,10 @@ z�ܕL\���wl/D- *����F�]�|r&�Yf��*������
             <h2>Certificats génériques</h2>
             <ul style="margin-top: 2em">
                 <li class="fragment">Multiples sous-domaines</li>
-                <li class="fragment" style="margin-top: 1em"><span class="red">*</span>.cabestre.fr</li>
-                <li class="fragment">dev<span class="red">*</span>.cabestre.fr</li>
-                <li class="fragment" style="text-decoration:line-through; margin-top: 1em"><span class="red">*</span>.<span class="red">*</span>.cabestre.fr</li>
-                <li class="fragment" style="text-decoration:line-through">devfest.<span class="red">*</span>.cabestre.fr</li>
+                <li class="fragment" style="margin-top: 1em"><span class="orange">*</span>.cabestre.fr</li>
+                <li class="fragment">dev<span class="orange">*</span>.cabestre.fr</li>
+                <li class="fragment" style="text-decoration:line-through; margin-top: 1em"><span class="orange">*</span>.<span class="orange">*</span>.cabestre.fr</li>
+                <li class="fragment" style="text-decoration:line-through">devfest.<span class="orange">*</span>.cabestre.fr</li>
             </ul>
         </section>
 
@@ -541,18 +541,8 @@ z�ܕL\���wl/D- *����F�]�|r&�Yf��*������
                 <li class="fragment">Tiers de confiance</li>
                 <li class="fragment">Verisign, IdenTrust, Let's Encrypt…</li>
                 <li class="fragment"><span class="orange">Vous</span> & <span class="orange">Moi</span></li>
+                <li class="fragment" style="margin-top: 1em"><span class="orange">PGP</span> : différence</li>
             </ul>
-        </section>
-
-        <section>
-            <h2>Signature de certificat</h2>
-
-            <div style="margin-top: 2em; margin-bottom: 100%" data-svg-fragment="myAssets/images/CSR.svg#[*|label=base]">
-                <a class="fragment" title="[*|label=frag1]"></a>
-                <a class="fragment" title="[*|label=frag2]"></a>
-                <a class="fragment" title="[*|label=frag4]"></a>
-                <a class="fragment" title="[*|label=frag3]"></a>
-            </div>
         </section>
 
         <section>
@@ -593,9 +583,10 @@ z�ܕL\���wl/D- *����F�]�|r&�Yf��*������
         <section>
             <h2>Confiance</h2>
             <ul style="margin-top: 2em">
+                <li class="fragment">Pourquoi faire confiance ?</li>
                 <li class="fragment">Comment faire confiance ?</li>
-                <li class="fragment">Ancre de confiance</li>
                 <li class="fragment">Magasin de confiance, «trust store»</li>
+                <li class="fragment" style="margin-top: 1em"><span class="orange">PGP</span> : analogie</li>
             </ul>
         </section>
 
@@ -620,6 +611,17 @@ z�ܕL\���wl/D- *����F�]�|r&�Yf��*������
         </section>
 
         <section>
+            <h2>Signature de certificat</h2>
+
+            <div style="margin-top: 2em; margin-bottom: 100%" data-svg-fragment="myAssets/images/CSR.svg#[*|label=base]">
+                <a class="fragment" title="[*|label=frag1]"></a>
+                <a class="fragment" title="[*|label=frag2]"></a>
+                <a class="fragment" title="[*|label=frag4]"></a>
+                <a class="fragment" title="[*|label=frag3]"></a>
+            </div>
+        </section>
+
+        <section>
             <h2>Certificat compromis</h2>
 
             <div  style="margin-bottom: 100%" data-svg-fragment="myAssets/images/compromission.svg#[*|label=base]">
@@ -633,11 +635,14 @@ z�ܕL\���wl/D- *����F�]�|r&�Yf��*������
             <h2>Certificat compromis</h2>
 
             <ul style="margin-top: 2em">
-                <li class="fragment"><span class="orange">CRL</span>
-                <li class="fragment">Certificate Revocation List</li>
-                <li class="fragment" style="margin-top: 1em"><span class="orange">OCSP</span>
-                <li class="fragment">Online Certificate Status Protocol
-                </li>
+                <div class="fragment">
+                    <li><span class="orange">CRL</span></li>
+                    <li>Certificate Revocation List</li>
+                </div>
+                <div class="fragment">
+                    <li style="margin-top: 1em"><span class="orange">OCSP</span></li>
+                    <li>Online Certificate Status Protocol</li>
+                </div>
             </ul>
         </section>
 
@@ -668,7 +673,7 @@ z�ܕL\���wl/D- *����F�]�|r&�Yf��*������
              </pre>
              <pre class="fragment" style="margin-bottom: 100%; border: none; color: #dcdcdc; background: #002b36; font-size: 20px; margin-top: 1em">
 
-  openssl s_client -connect devfest.cabestre.fr:80 -showcerts -verify 1
+  openssl s_client -connect github.com:443 -showcerts -verify 2
              </pre>
         </section>
 
@@ -679,24 +684,36 @@ z�ܕL\���wl/D- *����F�]�|r&�Yf��*������
                 <li class="fragment">Autorité de certification</li>
                 <li class="fragment">Service en ligne (API)</li>
                 <li class="fragment">Automatiser la livraison de certificats</li>
-                <li class="fragment" style="margin-top: 1em">Certificats validé par domaine</li>
+                <li class="fragment green" style="margin-top: 1em">Certificats validé par domaine</li>
                 <li class="fragment" style="text-decoration:line-through;">Certificats à validation étendue</li>
                 <li class="fragment" style="text-decoration:line-through;">Certificats génériques</li>
             </ul>
         </section>
 
         <section>
-            <h2>Chaîne de confiance</h2>
+            <h2>Let's Encrypt</h2>
+            <h4 style="margin-top: 1em">https://letsencrypt.status.io</h4>
+            <img style="margin-bottom: 100%" src="myAssets/images/LE-status.png">
+        </section>
 
-            <img style="margin-top: 1em; margin-bottom: 10em" src="myAssets/images/isrg-keys.png">
+        <section>
+            <h2>Let's Encrypt</h2>
+            <h4 style="margin-top: 1em">https://acme-v01.api.letsencrypt.org</h4>
+            <img style="margin-bottom: 10em" src="myAssets/images/LE-API.png">
         </section>
 
         <section>
             <h2>ACME</h2>
 
-            <ul style="margin-top: 2em">
-                <li class="fragment"><span class="orange">ISRG</span>: Internet Security Research Group</li>
-                <li class="fragment"><span class="orange">IETF</span>: Internet Egineering Task Force</li>
+            <ul style="margin-top: 1em">
+                <div class="fragment">
+                    <li><span class="orange">ISRG</span>: création 2013</li>
+                    <li>Internet Security Research Group</li>
+                </div>
+                <div style="margin-top: 1em" class="fragment">
+                    <li><span class="orange">IETF</span>: standardisation 2015</li>
+                    <li>Internet Egineering Task Force</li>
+                </div>
                 <li class="fragment" style="margin-top: 1em"><span class="green">Certbot</span>: client Python</li>
                 <li class="fragment"><span class="green">Boulder</span>: serveur Go</li>
                 <li class="fragment">Et bien d'autres</li>
@@ -704,14 +721,17 @@ z�ܕL\���wl/D- *����F�]�|r&�Yf��*������
         </section>
 
         <section>
-            <h2>ACME</h2>
+            <h2>Chaîne de confiance</h2>
+
+            <img style="margin-top: 1em; margin-bottom: 100%" src="myAssets/images/isrg-keys.png">
+        </section>
+
+        <section>
+            <h2>Principe</h2>
 
             <ul style="margin-top: 2em">
-                <li class="fragment">« Challenges »</li>
-                <li class="fragment">HTTP</li>
-                <li class="fragment">DNS</li>
-                <li class="fragment">SNI</li>
-                <li class="fragment">OOB</li>
+                <li class="fragment">Protocole défi-réponse</li>
+                <li style="margin-top: 1em"><span class="fragment green">http-01</span><span class="fragment">, <span class="green">dns-01</span></span><span class="fragment">, tls-sni-02</span><span class="fragment">, oob-01</span></li>
             </ul>
         </section>
 
@@ -742,11 +762,12 @@ z�ܕL\���wl/D- *����F�]�|r&�Yf��*������
         <section>
             <h2>Limitations</h2>
 
-            <ul style="margin-top: 2em">
-                <li class="fragment">20 certificats / semaine</li>
-                <li class="fragment">100 SAN / certificats</li>
-                <li class="fragment">5 doubles / semaine</li>
+            <ul style="margin-top: 1em">
+                <li class="fragment"><span class="green">20</span> certificats / semaine</li>
+                <li class="fragment"><span class="green">100</span> SAN / certificats</li>
+                <li class="fragment"><span class="green">5</span> doubles / semaine</li>
                 <li class="fragment">renouvellements illimités</li>
+                <li style="margin-top: 1em" class="fragment">« Staging environment »</li>
             </ul>
         </section>
 
@@ -754,16 +775,21 @@ z�ܕL\���wl/D- *����F�]�|r&�Yf��*������
             <h2>Avenir</h2>
 
             <ul style="margin-top: 2em">
-                <li class="fragment">ACME v2.0</li>
+                <li class="green">Janvier 2018</li>
+                <li class="fragment" style="margin-top: 1em">ACME v2.0</li>
                 <li class="fragment">Certificats génériques</li>
             </ul>
         </section>
 
         <section>
-            <div style="margin-left: 40px; margin-top: 1em; text-align: left" class="green">Frédéric Cabestre</div>
-            <div style="margin-left: 40px; font-size: smaller; text-align: left" class="blue">@fcabestre</div>
-            <div style="margin-left: 40px; text-align: left"><img src="myAssets/images/easymile.png"></div>
-            <h2 style="margin-top: 1em; margin-bottom: 8em">Merci</h2>
+            <div style="display: flex; justify-content: space-between">
+                <div style="display: flex; flex-direction: column">
+                    <div style="margin-top: 1em; text-align: left" class="green">Frédéric Cabestre</div>
+                    <div style="font-size: smaller; text-align: left" class="blue">@fcabestre</div>
+                </div>
+                <div style="margin-top: 1em; align-self: center"><img src="myAssets/images/easymile.png"></div>
+            </div>
+            <h1 style="margin-top: 1em ; margin-bottom: 100%">Merci</h1>
         </section>
     </div>
 </div>
